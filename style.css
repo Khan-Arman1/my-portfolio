@@ -176,7 +176,7 @@ main{
                 text-transform: capitalize;
                 position: relative;
                 height: 5rem;
-                width: 70%;
+                width: 100%;
 
             }
             & h1::before{
