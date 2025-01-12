@@ -1,0 +1,914 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Jost",sans-serif;
+}
+
+
+html{
+    font-size: 62.5%;
+    scroll-behavior:smooth;
+    scroll-snap-type: Y mandatory;
+    scrollbar-width:thin;
+}
+
+/* common */
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+}
+.container{
+    display: grid;
+}
+.fa-brands,.fa-solid{
+    padding-right: 0.7rem;
+    font-size: 2rem;
+}
+
+.fa-instagram{
+    width: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 1rem;
+    background:linear-gradient(-170deg,
+    blue,
+    red,
+    yellow);
+}
+.fa-facebook{
+    width: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 1rem;
+    color: rgb(24,119,242);
+    background-color: white;
+}
+.fa-youtube{
+    width: 2rem;
+    height: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 0.5rem;
+    color: rgb(255,0,0);
+    background-color: white;
+}
+.fa-linkedin-in{
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
+    background-color: rgb(0,0,225);
+    
+}
+.fa-envelope{
+    width: 2.5rem;
+    height: 2rem;
+    margin-right: 1.5rem;
+    color: orange;
+}
+
+.fa-arrow-right{
+    margin-left: 0.7rem;
+}
+/* common */
+
+
+/* header file */
+.head-class{
+    position: fixed;
+    width: 100%;
+    height: 5.5rem;
+    padding: 1.5rem;
+    background-color: rgb(240, 248, 255);
+    z-index: 8;
+    
+    & .container{
+        grid-template-columns: 50% 50%;
+    }
+    & .nav-bar ul{
+            margin-top: 0.5rem;
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            font-size: 1.7rem;
+            & li{
+            display: inline-block;
+            font-weight: bold;
+            letter-spacing: 0.15rem;
+            
+            & a:hover{
+                text-transform: uppercase;
+            }
+        }
+        
+        #home{
+            color: rgb(153, 18, 212);
+            text-transform: uppercase;
+        }
+        #contact{
+            color: rgb(153, 18, 212);
+            text-transform: uppercase;
+        }
+        #project{
+            color: rgb(153, 18, 212);
+            text-transform: uppercase;
+        }
+        #about{
+            color: rgb(153, 18, 212);
+            text-transform: uppercase;
+        }
+    }
+    & .logo{
+        display: grid;
+        justify-content: center;        
+        & a{
+            font-size: 2.2rem;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: underline;
+            border: 0.2rem solid black;
+            border-radius: 0.5rem;
+        }
+        
+    }
+}
+/* header file */
+
+/* about page */
+.about-section{
+    width: 100%;
+    height: 100vh;   
+    justify-items: center;
+    align-content: center;
+    background-color: rgb(0, 0, 0,0.5);
+    
+    
+    & .about-content{
+        width: 80%;
+        height: 80vh;
+        overflow:auto;
+        
+
+        padding: 2rem;
+        background-color: rgb(250, 235, 215,0.3);
+        
+        & .about-heading, .about-skills, .about-my-qualification{
+            width: 100%;
+
+            & h1{
+                font-size: 3rem;
+            }
+
+            & p{
+                padding: 2.5rem;
+                font-size: 1.6rem;
+                text-align: justify;
+                line-height: 1.3;
+                letter-spacing: 0.2rem;
+                word-spacing: 0.5rem;
+            }
+            & h2{
+                font-size: 2.2rem;
+            }
+            & h1,h2{
+                width: 100%;
+                text-transform: capitalize;
+                letter-spacing: 0.2rem;
+                line-height: 2;
+            }
+            & .list{
+                font-size: 1.5rem;
+                & ul{
+                    padding: 3rem;
+                    list-style-type:none;
+                    letter-spacing: 0.2rem;
+                    
+                    & .k{
+                        width: 35rem;
+                        height: 1rem;
+                        background-color: rgb(0, 0, 0, 0.3);
+                        border-radius: 1.5rem;
+                        position: relative;
+                        margin-bottom: 1rem;
+                    }
+                    
+                    & .k1::after,.k2::after,.k3::after,.k4::after,.k5::after,.k6::after{
+                        content: " ";
+                        position: absolute;
+                        width: 0;
+                        height: 1rem;
+                        border-radius: 1rem;
+                        transition: all 0.2s linear;
+                        
+                    }            
+                        & .k1::after{
+                            background-color: red;
+                            width: 28rem;
+                        }
+                        
+                        & .k2::after{
+                            background-color: green;
+                            width: 25rem;
+                        }
+                        
+                        & .k3::after{
+                            background-color: blue;
+                            width: 20rem;
+                        }
+                        
+                        & .k4::after{
+                            background-color: yellow;
+                            width: 5rem;
+                        }
+                        
+                        & .k5::after{
+                            background-color: orange;
+                            width: 20rem;
+                        }
+                        
+                        & .k6::after{
+                            background-color: black;
+                            width: 25rem;
+                        }
+                }
+            }
+            & table{
+                width: 100%;
+                display: grid;
+                justify-items: center;
+                background: floralwhite;
+                margin-top: 2rem;
+                border-radius: 1rem;
+                box-shadow: 0.5rem 0.5rem 2rem 0.2rem black;
+            }
+
+            & table th,tr,td{
+                font-size: 1.5rem;
+
+                & th{
+                    font-size: 2rem;
+                    text-transform: capitalize;
+                    padding: 0.5rem;
+                    letter-spacing: 0.1rem;
+                }
+                & td{
+                    text-transform: capitalize;
+                    text-align: center;
+                    padding: 0.5rem;
+                    letter-spacing: 0.1rem;
+                }
+            }
+
+        }
+        & .about-my-photos{
+            margin-top: 3rem;
+            width: 100%;
+
+            & h2{
+                font-size: 2.2rem;
+                margin-bottom: 2rem;
+                letter-spacing: 0.2rem;
+                text-transform: capitalize;
+            }
+
+            & .about-photos{
+                display: grid;
+                padding: 1rem;
+                grid-template-columns: 50% 50%;
+                justify-items: center;
+                gap: 2rem;
+    
+                & .post1{
+                    background-image: url(image5.jpg);
+                }
+                & .post2{
+                    background-image: url(image6.jpg);
+                }
+    
+                & .post{
+                    width: 25rem;
+                    height: 25rem;
+                    background-size: 100% 130%;
+                    background-repeat: no-repeat;
+                    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+                }
+            }
+        }
+    }      
+}
+/* about page */
+
+/* project section */
+.project-section{
+    width: 100%;
+    height: 150vh;
+    justify-items: center;    
+    background-image: url(backimg2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+
+    & .project-content{
+        margin-top: 10rem;
+        width: 80%;
+        height: 80%;
+        padding: 3rem;
+
+
+        
+        & h2{
+            font-size: 3.5rem;
+            text-shadow: 0 0 2rem white;
+            color: white;
+            text-transform: capitalize;
+        }
+        
+        & .projects{
+            margin: 0 auto;
+            padding: 3rem 0 0 0;
+            width: 80%;
+            height: 70%;
+            justify-items: center;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 2.5rem;
+
+            
+            & .frame1, .frame2,.frame3{
+                height: 20rem;
+            }
+            
+            & .frame{
+                background-color: white;
+                width: 100%;
+                height: 25rem;
+
+                
+                & .iframe{
+                    width: 90%;
+                    height: 65%;
+                    margin: 0.5rem auto;
+                    overflow: hidden;
+                    padding-top: 0.5rem;
+                }
+
+                & h5,p{
+                    text-transform: capitalize;
+                    text-align: center;
+                }
+                & h5{
+                    padding-top: 1rem;
+                    font-size: 2rem;
+                    letter-spacing: 0.1rem;
+                }
+                & p{
+                    font-size: 1.6rem;
+                }
+            }
+            & .frame1,.frame2{
+                & .iframe{
+                    border: 0.2rem solid black;
+                    width: 100%;
+                }
+                
+            }   
+        }
+
+        & .project-button{
+            margin-top: 5rem;
+            width: 25rem;
+            & a{
+                background-color: black;
+                padding: 1rem 2rem;
+                border-radius: 2rem;
+                font-size: 1.7rem;
+                color: white;
+                border:0.3rem solid white;
+            }
+        }
+
+    }
+}
+/* project section */
+
+
+/* footer section */
+footer{
+
+    width: 100%;
+    height: 41vh;
+    background-color: rgb(0,0,0);
+
+    & .container{
+        grid-template-columns: 50% 50%;
+        padding: 3rem;
+        height:100%;
+        
+        & .logo{
+
+            text-align: center;
+            font-size: 3rem;
+            
+            & a{
+                color: white;
+                text-decoration: underline;
+            }
+            & p{
+                font-size: 2rem;
+                color: white;
+            }
+
+            & .about-pagelink{
+                margin-top: 2rem;
+                & a{
+                    font-size: 2rem;
+                    background-color: white;
+                    color: black;
+                    padding: 1rem;
+                    text-decoration: none;
+                    width: 20rem;
+                    border-radius: 2rem;
+                    box-shadow: 0.2rem 0.4rem 1rem 0.3rem black;
+                }
+            }
+        }
+        & .connect{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            
+            & ul{
+                list-style-type: none;
+                line-height: 2;
+                
+                & a{
+                    font-size: 1.8rem;
+                    color: white;
+                }
+
+            }
+
+        }
+    }
+}
+/* footer section */
+
+@media (width<=852px) {
+    html{
+        font-size: 50.5%;
+    }
+
+    /* common */
+    .fa-brands,.fa-solid{
+        font-size: 3rem;
+    }
+
+    .fa-instagram{
+        width: 3rem;
+    }
+    .fa-facebook{
+        width: 3rem;
+    }
+    .fa-youtube{
+        width: 3rem;
+        height: 2.5rem;
+    }
+    .fa-linkedin-in{
+        width: 3rem;
+        height: 3rem;        
+    }
+    .fa-envelope{
+        width: 2.5rem;
+        height: 2rem;
+    }
+/* common */
+
+    .head-class{
+        height: 7rem;
+        & .container{
+            & .logo{
+                & a{
+                    font-size: 3rem;
+                }
+            }
+            & .nav-bar{
+                & ul li a{
+                    font-size: 2.2rem;                    
+                }
+            }
+        }
+    }
+
+    .about-section{
+        height: 100vh;
+        
+        & .about-content{
+
+            & .about-heading, .about-skills, .about-my-qualification, .about-my-photos{
+                & h1{
+                    font-size: 3.5rem;
+                }
+                & h2{
+                    font-size: 2.6rem;
+                }
+                
+                & p,ul{
+
+                    font-size: 2rem;
+                    line-height: 3.5rem;
+                }
+                & ul{
+                    & li{
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            & .about-skills{
+                display: grid;
+                justify-items: center;
+
+                & .list{
+                    width: 100%;
+
+                    & ul{
+                        font-size: 1.8rem;
+                            & .k{
+                                margin-bottom: 1rem;
+                                height: 1.5rem;
+                            }  
+                            & .k1::after,.k2::after,.k3::after,.k4::after,.k5::after,.k6::after {
+                                height: 1.5rem;
+                            }
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* project page */
+    .project-section{
+        height: 130vh;
+
+        & .project-content{
+            height: auto;
+
+            & h2{
+                font-size: 4rem;
+            }
+            
+            & .projects{
+                margin-top: 8rem;
+                height: 100rem;
+                grid-template-columns: none;
+
+
+
+                & .frame{
+                    height: 35rem;
+                    
+                    & h5{
+                        font-size: 3.5rem;
+                    }
+                    & p{
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+    /* project page */
+
+
+    footer{
+        height: auto;
+
+        & .container{
+            & .logo{
+                & a{
+                    font-size: 3rem;
+                }
+                & p{
+                    font-size: 2rem;
+                }
+                & .about-pagelink{
+                    margin-top: 5rem;
+                    & a{
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+            & .connect{
+                & ul{
+                    line-height: 1.8;
+                    & a{
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (width<=530px) {
+    html{
+        font-size: 30.5%;
+    }
+/* common */
+    .fa-brands,.fa-solid{
+        font-size: 4rem;
+    }
+
+    .fa-instagram{
+        width: 3.5rem;
+    }
+    .fa-facebook{
+        width: 4rem;
+    }
+    .fa-youtube{
+        width: 4rem;
+        height: 3.5rem;
+    }
+    .fa-linkedin-in{
+        width: 4.2rem;
+        height: 4.2rem;        
+    }
+    .fa-envelope{
+        width: 2.5rem;
+        height: 2rem;
+    }
+/* common */
+
+    .head-class{
+        height: 13rem;
+        & .container{
+            grid-template-columns: none;
+            
+            & .logo{
+                & a{
+                    font-size: 4rem;
+                }
+            }
+            & .nav-bar ul li a{
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+
+    .about-section{
+        height: 100vh;
+        & .about-content{
+            
+            & .about-heading, .about-skills, .about-my-qualification, .about-my-photos{
+                & h1{
+                    font-size: 4.6rem;
+                }
+                & h2{
+                    font-size:4rem;
+                    width: 100%;
+                }
+                
+                & p,ul{
+                    font-size: 3.5rem;
+                    line-height: 1.2;
+                }
+            }
+            
+            & .about-skills{
+                & .list{
+                    
+                    & ul{
+                        & li{
+                            font-size: 3rem;
+                        }
+                        & .k{
+                            margin-bottom: 2.5rem;
+                                height: 2rem;
+                            }  
+                            & .k1::after,.k2::after,.k3::after,.k4::after,.k5::after,.k6::after {
+                                height: 2rem;
+                            }
+                        }
+                }
+            }
+            & .about-my-photos{
+                & .about-photos{
+                    grid-template-columns: none;
+                    justify-content: center;
+                    & .post{
+                        width: 35rem;
+                        height: 35rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /* project page */
+    .project-section{
+        height: 100vh;
+
+        & .project-content{
+            margin-top: 15rem;
+            height: auto;
+            
+            & h2{
+                margin-top: 3rem;
+                font-size: 5rem;
+            }
+            
+            & .projects{
+                margin-top: 8rem;
+                height: 100rem;
+                grid-template-columns: none;
+
+
+
+                & .frame{
+                    height: 35rem;
+                    
+                    & h5{
+                        font-size: 3.5rem;
+                    }
+                    & p{
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+    /* project page */
+
+
+    footer{
+        height:  35vh;
+
+        & .container{
+            grid-template-columns: none;
+
+            & .logo{
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+                
+                & a{
+                    font-size: 6rem;
+                }
+                
+                & p{
+                    font-size: 4rem;
+                }
+                
+                & .about-pagelink{
+                    & a{
+                        font-size: 4rem;
+                        text-decoration: none;
+                        font-weight: 600;
+                    }
+                }
+            }
+            & .connect{
+                margin-top: 5rem;
+
+                & ul{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 2rem;
+
+                    & .fa-brands,.fa-solid{
+                        font-size: 4rem;
+                    }
+
+
+                    & a{
+                        font-size: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (width<=365px) {
+    html{
+        font-size: 26.5%;
+    }
+/* common */
+/* common */
+.fa-brands,.fa-solid{
+    font-size: 4rem;
+}
+
+.fa-instagram{
+    width: 3.5rem;
+}
+.fa-facebook{
+    width: 4rem;
+}
+.fa-youtube{
+    width: 4rem;
+    height: 3.5rem;
+}
+.fa-linkedin-in{
+    width: 4.2rem;
+    height: 4.2rem;        
+}
+.fa-envelope{
+    width: 2.5rem;
+    height: 2rem;
+}
+/* common */
+
+
+    .head-class{
+        height: 15rem;
+        & .nav-bar ul{
+            margin-top: 2rem;
+            font-size: 2rem;
+        }
+    }
+    
+    .about-section{
+        height: 100vh;
+
+        & .about-content{
+
+            & .about-heading, .about-skills, .about-my-qualification{
+                & p{
+                    font-size: 3.5rem;
+                }
+
+            }
+
+            & .about-skills{
+                & .list{
+                    & ul{
+                        list-style-type: none;
+                    }
+                }
+            }
+
+            & .about-my-qualification{
+                width: 100%;
+
+                & table{
+                    width: 100%;
+
+                    & td,th{
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            & .about-photos{
+                grid-template-columns: none;
+
+                & .post:hover{
+                    scale: 1.5;
+                }
+                
+            }
+
+        }
+    }
+
+    /* project page */
+    .project-section{
+        height: 100vh;
+        
+        & .project-content{
+            height: auto;
+            justify-content: center;    
+            justify-items: center;
+            margin-top: 20rem;
+            
+            & h2{
+                font-size: 5rem;
+                width: 100%;
+            }
+            
+            & .projects{
+                margin-top: 8rem;
+                height: 100rem;
+                grid-template-columns: none;
+
+
+
+                & .frame{
+                    height: 35rem;
+                    
+                    & h5{
+                        font-size: 3.5rem;
+                    }
+                    & p{
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+    /* project page */
+
+}
