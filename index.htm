@@ -27,7 +27,45 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
   <!-- Favicon -->
   <link rel="icon" href="website_logo.png" type="image/png">
-</head>
+</head><script>
+  const name = "Arman Khan";
+  const typingElement = document.getElementById("typed-name");
+
+  let index = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    if (!isDeleting) {
+      typingElement.textContent = name.substring(0, index + 1);
+      index++;
+
+      if (index === name.length) {
+        setTimeout(() => {
+          isDeleting = true;
+          typeEffect();
+        }, 1500); // pause before deleting
+        return;
+      }
+    } else {
+      typingElement.textContent = name.substring(0, index - 1);
+      index--;
+
+      if (index === 0) {
+        isDeleting = false;
+      }
+    }
+
+    setTimeout(typeEffect, isDeleting ? 100 : 150);
+  }
+
+  // Start the effect when page loads
+  document.addEventListener("DOMContentLoaded", typeEffect);
+</script>
+
+
+<!--   JavaScript for name animation -->
+
+  
 <body class="font-[Jost] bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
   <!-- Header -->
@@ -51,7 +89,11 @@
       <img src="images/myimg11.jpg" alt="Arman Khan" class="w-40 h-40 rounded-full shadow-lg border-4 border-blue-500 object-cover">
     </div>
 
-    <h1 data-aos="fade-up" class="text-4xl sm:text-5xl font-bold">Hey, I'm Arman Khan</h1>
+<!--     <h1 data-aos="fade-up" class="text-4xl sm:text-5xl font-bold">Hey, I'm Arman Khan</h1> -->
+    <h1 data-aos="fade-up" class="text-4xl sm:text-5xl font-bold">
+      Hey, I'm <span id="typed-name" class="text-blue-600"></span>
+    </h1>
+
 
     <p data-aos="fade-up" data-aos-delay="100" class="mt-4 text-lg">BCA Student | Web & Python Developer</p>
     <p data-aos="fade-up" data-aos-delay="200" class="max-w-xl mx-auto mt-4">
