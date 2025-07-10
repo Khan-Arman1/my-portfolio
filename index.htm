@@ -3,31 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arman Khan - Developer Portfolio</title>
+  <title>Arman Khan - Portfolio</title>
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- AOS Plugin -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
   <!-- Favicon -->
   <link rel="icon" href="website_logo.png" type="image/png">
 </head>
 <body class="font-[Jost] bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
   <!-- Header -->
-  <header class="bg-gray-100 dark:bg-gray-800 shadow">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="#" class="text-xl font-bold tracking-wide hover:text-blue-500"><u>Arman Khan</u></a>
+  <header class="bg-gray-100 dark:bg-gray-800 shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold hover:text-blue-500">Arman Khan</a>
       <nav>
-        <ul class="flex gap-6 font-medium">
+        <ul class="flex space-x-6 font-medium">
           <li><a href="#home" class="hover:text-blue-500">Home</a></li>
           <li><a href="#about" class="hover:text-blue-500">About</a></li>
           <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
@@ -37,42 +33,53 @@
     </div>
   </header>
 
-  <!-- Main Hero Section -->
-  <main id="home" class="container mx-auto px-4 py-20 text-center">
-    <div data-aos="fade-up" class="mb-6">
-      <h1 class="text-4xl sm:text-5xl font-bold">Hey, I'm Arman Khan</h1>
-      <p class="mt-4 text-lg">BCA Student | Web & Python Developer</p>
-    </div>
-    <p class="max-w-xl mx-auto">I enjoy creating things with code, especially in web development and AI tools.</p>
-    <a href="#contact" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+  <!-- Home Section -->
+  <section id="home" class="container mx-auto px-4 py-20 text-center">
+    <h1 data-aos="fade-up" class="text-4xl sm:text-5xl font-bold">Hey, I'm Arman Khan</h1>
+    <p data-aos="fade-up" data-aos-delay="100" class="mt-4 text-lg">BCA Student | Web & Python Developer</p>
+    <p data-aos="fade-up" data-aos-delay="200" class="max-w-xl mx-auto mt-4">
+      I enjoy creating things with code, especially in web development and AI tools.
+    </p>
+    <a href="#contact" data-aos="fade-up" data-aos-delay="300"
+      class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
       Contact Me <i class="fa-solid fa-arrow-right ml-2"></i>
     </a>
-  </main>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6">About Me</h2>
-      <p class="text-center max-w-3xl mx-auto mb-8">
-        I'm in my 3<sup>rd</sup> year of BCA. I’m proficient in HTML, CSS, PHP, Python, C/C++, MongoDB, MySQL, SQLAlchemy, ML, and always exploring new tech.
+      <h2 data-aos="fade-up" class="text-3xl font-bold text-center mb-6">About Me</h2>
+      <p data-aos="fade-up" data-aos-delay="100" class="text-center max-w-3xl mx-auto mb-8">
+        I'm currently in my 3<sup>rd</sup> year of BCA at University of Technology, Jaipur. Born in Alwar, I’ve built foundational expertise in Frontend (HTML, CSS), Backend (PHP, Python), Java, C/C++, and databases (MongoDB, MySQL, SQLAlchemy). My goal is to specialize as an AI/ML engineer.
       </p>
 
       <div class="grid md:grid-cols-2 gap-10 items-center">
-        <ul class="space-y-4 text-lg" data-aos="fade-right">
+        <ul data-aos="fade-right" class="space-y-4 text-lg">
           <li><strong>Frontend:</strong> HTML, CSS, Bootstrap, Tailwind CSS</li>
           <li><strong>Backend & Programming:</strong> Python, PHP</li>
           <li><strong>Databases:</strong> MongoDB, MySQL, SQLAlchemy</li>
-          <li><strong>Others:</strong> Java, WordPress, ChatGPT & AI Tools</li>
+          <li><strong>Other skills:</strong> Java, WordPress, ChatGPT & AI Tools</li>
         </ul>
-        <div class="w-full h-64 bg-gray-300 rounded-lg" data-aos="zoom-in-up">
-          <!-- Replace with an actual image or animation -->
-        </div>
+        <div data-aos="zoom-in-up" class="w-full h-64 bg-gray-300 rounded-lg"></div>
       </div>
 
-      <div class="text-center mt-8">
-        <a href="about.htm" class="text-blue-600 hover:underline">
-          See more... <i class="fa-solid fa-arrow-right"></i>
-        </a>
+      <div data-aos="fade-up" class="mt-12 overflow-x-auto">
+        <table class="w-full text-left border collapse">
+          <thead class="bg-gray-200 dark:bg-gray-700">
+            <tr>
+              <th class="px-4 py-2">Institution</th>
+              <th class="px-4 py-2">Years</th>
+              <th class="px-4 py-2">Level</th>
+              <th class="px-4 py-2">Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border px-4 py-2">Bal Bharti Public School, Alwar</td><td class="border px-4 py-2">2018–2020</td><td class="border px-4 py-2">9<sup>th</sup>–10<sup>th</sup></td><td class="border px-4 py-2">89%</td></tr>
+            <tr><td class="border px-4 py-2">Bal Vishwa Bharti Public School, Jaipur</td><td class="border px-4 py-2">2020–2022</td><td class="border px-4 py-2">11<sup>th</sup>–12<sup>th</sup></td><td class="border px-4 py-2">75%</td></tr>
+            <tr><td class="border px-4 py-2">KCRI College, Alwar</td><td class="border px-4 py-2">2022–Present</td><td class="border px-4 py-2">BCA</td><td class="border px-4 py-2">—</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -80,56 +87,83 @@
   <!-- Projects Section -->
   <section id="projects" class="py-20">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-12">Projects</h2>
-
-      <div class="grid md:grid-cols-2 gap-10" data-aos="fade-up">
+      <h2 data-aos="fade-up" class="text-3xl font-bold mb-12">Projects</h2>
+      <div data-aos="fade-up" data-aos-delay="100" class="grid md:grid-cols-3 gap-8">
+        <!-- Repeat each project card -->
         <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow">
-          <iframe class="w-full h-64 rounded" src="https://www.youtube-nocookie.com/embed/XzOjrF0iDow" title="Jarvis Assistant" allowfullscreen></iframe>
+          <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/XzOjrF0iDow" allowfullscreen></iframe>
           <h3 class="mt-4 font-semibold text-xl">Jarvis Assistant</h3>
           <p>Personal voice assistant using Python</p>
         </div>
         <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow">
-          <iframe class="w-full h-64 rounded" src="https://www.youtube-nocookie.com/embed/NXt9RQ40-VA" title="Login Page" allowfullscreen></iframe>
-          <h3 class="mt-4 font-semibold text-xl">Login Page</h3>
-          <p>Simple and beautiful login page design</p>
+          <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/oIedO8E6oSU" allowfullscreen></iframe>
+          <h3 class="mt-4 font-semibold text-xl">IFSC Code Finder</h3>
+          <p>Project website for finding bank IFSC codes</p>
         </div>
-      </div>
-
-      <div class="mt-8">
-        <a href="project.htm" class="text-blue-600 hover:underline">
-          All Projects <i class="fa-solid fa-arrow-right"></i>
-        </a>
+        <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow">
+          <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/5f-g7RxQaOg" allowfullscreen></iframe>
+          <h3 class="mt-4 font-semibold text-xl">Hotel Management System</h3>
+          <p>Hotel management system web app</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow">
+          <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/EdeN8FSmmVI" allowfullscreen></iframe>
+          <h3 class="mt-4 font-semibold text-xl">Driving Licence</h3>
+          <p>Driving licence registration & generator</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow">
+          <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/JVvLnQvX0N8" allowfullscreen></iframe>
+          <h3 class="mt-4 font-semibold text-xl">Birth Certificate System</h3>
+          <p>Birth certificate registration & generator</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow">
+          <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/NXt9RQ40-VA" allowfullscreen></iframe>
+          <h3 class="mt-4 font-semibold text-xl">Login Form</h3>
+          <p>Simple, attractive login page</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer Section -->
-  <footer id="contact" class="bg-gray-900 text-white py-12">
-    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8">
-      <div>
-        <h3 class="text-xl font-bold">Arman Khan</h3>
-        <p>Contact: <a href="tel:+919887084000" class="underline">+91 98870 84000</a></p>
-        <div class="mt-4">
-          <a href="contact.htm" class="inline-block text-blue-400 hover:underline">
-            Contact Page <i class="fa-solid fa-arrow-right"></i>
-          </a>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Contact Info -->
+        <div data-aos="fade-right" class="space-y-6">
+          <h2 class="text-3xl font-bold">Get in Touch</h2>
+          <p>Feel free to contact me via any platform below:</p>
+          <ul class="space-y-4 text-lg">
+            <li><a href="https://www.instagram.com/invites/contact/?igsh=j5n9pgz7lhn" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-pink-600"><i class="fab fa-instagram text-xl"></i> Instagram</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100056227550232" target="_blank" class="flex items-center gap-2 hover:text-blue-600"><i class="fab fa-facebook text-xl"></i> Facebook</a></li>
+            <li><a href="https://youtube.com/@armankhan-pr5xw" target="_blank" class="flex items-center gap-2 hover:text-red-600"><i class="fab fa-youtube text-xl"></i> YouTube</a></li>
+            <li><a href="https://www.linkedin.com/in/arman-khan-623443289" target="_blank" class="flex items-center gap-2 hover:text-blue-800"><i class="fab fa-linkedin-in text-xl"></i> LinkedIn</a></li>
+            <li><a href="mailto:armankhan52210@gmail.com" class="flex items-center gap-2 hover:text-green-600"><i class="fas fa-envelope text-xl"></i> Email</a></li>
+            <li><a href="tel:+919887084000" class="flex items-center gap-2 hover:text-indigo-600"><i class="fas fa-phone text-xl"></i> +91 98870 84000</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Form -->
+        <div data-aos="fade-left" class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
+          <h2 class="text-2xl font-semibold mb-6">Send a Message</h2>
+          <form action="https://formspree.io/f/xvgowgdp" method="POST" class="space-y-4">
+            <div><label class="block text-sm font-medium">Name</label><input name="name" type="text" placeholder="Your Name" required maxlength="25" class="w-full mt-1 p-3 border rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"/></div>
+            <div><label class="block text-sm font-medium">Contact No.</label><input name="number" type="tel" placeholder="0123456789" pattern="[0-9]{10}" maxlength="11" class="w-full mt-1 p-3 border rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"/></div>
+            <div><label class="block text-sm font-medium">Email</label><input name="mail" type="email" placeholder="xyz@gmail.com" required maxlength="30" class="w-full mt-1 p-3 border rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"/></div>
+            <button type="submit" class="px-6 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">Submit</button>
+          </form>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div>
-        <h4 class="font-semibold text-lg mb-3">Connect with Me</h4>
-        <ul class="space-y-2">
-          <li><a href="https://www.instagram.com/invites/contact/?igsh=j5n9pgz7lhn&utm_content=k5xwfr1" target="_blank" rel="noopener" class="hover:underline"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=100056227550232" target="_blank" rel="noopener" class="hover:underline"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-          <li><a href="https://youtube.com/@armankhan-pr5xw" target="_blank" rel="noopener" class="hover:underline"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
-          <li><a href="https://www.linkedin.com/in/arman-khan-623443289" target="_blank" rel="noopener" class="hover:underline"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
-          <li><a href="mailto:armankhan52210@gmail.com" class="hover:underline"><i class="fa-solid fa-envelope"></i> Email</a></li>
-        </ul>
-      </div>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Arman Khan — All Rights Reserved.</p>
     </div>
   </footer>
 
-  <!-- AOS Plugin -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>AOS.init({ once: true });</script>
 </body>
