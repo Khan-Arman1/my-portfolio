@@ -27,44 +27,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
   <!-- Favicon -->
   <link rel="icon" href="website_logo.png" type="image/png">
-</head><script>
-  const name = "Arman Khan";
-  const typingElement = document.getElementById("typed-name");
 
-  let index = 0;
-  let isDeleting = false;
-
-  function typeEffect() {
-    if (!isDeleting) {
-      typingElement.textContent = name.substring(0, index + 1);
-      index++;
-
-      if (index === name.length) {
-        setTimeout(() => {
-          isDeleting = true;
-          typeEffect();
-        }, 1500); // pause before deleting
-        return;
-      }
-    } else {
-      typingElement.textContent = name.substring(0, index - 1);
-      index--;
-
-      if (index === 0) {
-        isDeleting = false;
-      }
-    }
-
-    setTimeout(typeEffect, isDeleting ? 100 : 150);
+<!--   Name animation -->
+  <style>
+  #typed-name::after {
+    content: '|';
+    animation: blink 1s infinite;
+    color: #1e40af;
+    margin-left: 2px;
   }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+</style>
 
-  // Start the effect when page loads
-  document.addEventListener("DOMContentLoaded", typeEffect);
-</script>
-
-
-<!--   JavaScript for name animation -->
-
+</head>
   
 <body class="font-[Jost] bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
@@ -222,5 +200,38 @@
   <!-- AOS Plugin -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>AOS.init({ once: true });</script>
+
+<!--   JavaScript for name animation -->
+<script>
+  const name = "Arman Khan";
+  const typingElement = document.getElementById("typed-name");
+
+  let index = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    if (!isDeleting) {
+      typingElement.textContent = name.substring(0, index + 1);
+      index++;
+      if (index === name.length + 1) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1000); // pause after typing
+        return;
+      }
+    } else {
+      typingElement.textContent = name.substring(0, index - 1);
+      index--;
+      if (index === 0) {
+        isDeleting = false;
+      }
+    }
+    setTimeout(typeEffect, isDeleting ? 100 : 150); // typing & deleting speed
+  }
+
+  typeEffect(); // run immediately
+</script>
+
+
+
 </body>
 </html>
