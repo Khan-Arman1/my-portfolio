@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+<title>{% block title %}{% endblock  %} Portfolio</title>
+{% block body %}
+  
+<body class="font-[Jost] bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- Header -->
+  <header class="bg-gray-100 dark:bg-gray-800 shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold hover:text-blue-500">Arman Khan</a>
+      <nav>
+        <ul class="flex space-x-6 font-medium">
+          <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+          <!-- <li><a href="#about" class="hover:text-blue-500">About</a></li> -->
+          <!-- <li><a href="{{ url_for('bot') }}" class="hover:text-blue-500">Bot</a></li> -->
+          <li><a href=" {{ url_for('contact')}}` " class="hover:text-blue-500">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="container mx-auto px-4 py-20 text-center">
+    <div class="flex justify-center mb-6" data-aos="zoom-in">
+      <img src=" {{ url_for('static', filename='/images/myimg11.jpg') }} " alt="Arman Khan" class="w-40 h-40 rounded-full shadow-lg border-4 border-blue-500 object-cover">
+    </div>
+
+<!--     <h1 data-aos="fade-up" class="text-4xl sm:text-5xl font-bold">Hey, I'm Arman Khan</h1> -->
+    <!-- <h1 data-aos="fade-up" class="text-4xl sm:text-5xl font-bold">
+      Hey, I'm <span id="typed-name" class="text-blue-600"></span>
+    </h1> -->
+    <h1 data-aos="fade-up" class="text-4xl sm:text-5xl font-bold">
+        Hey, I'm <span id="typed-name" class="text-blue-600"></span>
+    </h1>
+
+
+
+    <p data-aos="fade-up" data-aos-delay="100" class="mt-4 text-lg">BCA Student | Web & Python Developer</p>
+    <p data-aos="fade-up" data-aos-delay="200" class="max-w-xl mx-auto mt-4">
+      I enjoy creating things with code, especially in python and know how to use AI tools.
+    </p>
+    <a href="#footer" data-aos="fade-up" data-aos-delay="300"
+      class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+      Contact Me <i class="fa-solid fa-arrow-right ml-2"></i>
+    </a>
+
+
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4 text-center">
+      <h2 data-aos="fade-up" class="text-3xl font-bold mb-12">Projects</h2>
+      <div data-aos="fade-up" data-aos-delay="100" class="grid md:grid-cols-3 gap-8">
+        <!-- Repeat each project card -->
+        <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow">
+          <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/XzOjrF0iDow" allowfullscreen></iframe>
+          <h3 class="mt-4 font-semibold text-xl">Jarvis Assistant</h3>
+          <p>Personal voice assistant using Python</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow">
+          <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/oIedO8E6oSU" allowfullscreen></iframe>
+          <h3 class="mt-4 font-semibold text-xl">IFSC Code Finder</h3>
+          <p>Project website for finding bank IFSC codes</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow">
+          <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/5f-g7RxQaOg" allowfullscreen></iframe>
+          <h3 class="mt-4 font-semibold text-xl">Hotel Management System</h3>
+          <p>Hotel management system web app</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow">
+          <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/EdeN8FSmmVI" allowfullscreen></iframe>
+          <h3 class="mt-4 font-semibold text-xl">Driving Licence</h3>
+          <p>Driving licence registration & generator</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow">
+          <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/JVvLnQvX0N8" allowfullscreen></iframe>
+          <h3 class="mt-4 font-semibold text-xl">Birth Certificate System</h3>
+          <p>Birth certificate registration & generator</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow">
+          <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/NXt9RQ40-VA" allowfullscreen></iframe>
+          <h3 class="mt-4 font-semibold text-xl">Login Form</h3>
+          <p>Simple, attractive login page</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 data-aos="fade-up" class="text-3xl font-bold text-center mb-6">About Me</h2>
+      <p data-aos="fade-up" data-aos-delay="100" class="text-center max-w-3xl mx-auto mb-8">
+        I'm currently in my 3<sup>rd</sup> year of BCA at University of Technology, Jaipur. Born in Alwar, I’ve built foundational expertise in Frontend (HTML, CSS, Bootstrap, Tailwind), Backend (PHP, Python), Java, C/C++, and databases (MongoDB, MySQL, SQLAlchemy). My goal is to specialize as an AI/ML engineer and Data Scientist.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <ul data-aos="fade-right" class="space-y-4 text-lg">
+          <li><strong>Frontend:</strong> HTML, CSS, Bootstrap, Tailwind CSS</li>
+          <li><strong>Backend & Programming:</strong> Python, PHP</li>
+          <li><strong>Databases:</strong> MongoDB, MySQL, SQLAlchemy</li>
+          <li><strong>Other skills:</strong> Java, WordPress, ChatGPT & AI Tools</li>
+        </ul>
+        
+        <div data-aos="zoom-in-up" class="text-center">
+          <img src=" {{ url_for('static',filename='images/chatbt-project.ipynb.png') }}" alt="Chatbot Project Screenshot" class="mx-auto w-full max-w-md rounded-xl shadow-lg"><br>
+          <p class="italic text-gray-600 dark:text-gray-300 text-lg">"Code is the poetry of logic – I love turning ideas into digital reality."</p>
+        </div>
+
+
+      </div>
+      <br>
+      <hr>
+      <br>
+    
+
+      <div class="overflow-x-auto" > 
+        <!-- mt-10"> -->
+        <table class="w-full border-collapse">
+        <!-- border border-gray-300 dark:border-gray-700 text-sm sm:text-base"> -->
+          <thead class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100">
+            <tr>
+              <th class="border px-4 py-2 text-left">Institution</th>
+              <th class="border px-4 py-2 text-left">Years</th>
+              <th class="border px-4 py-2 text-left">Level</th>
+              <th class="border px-4 py-2 text-left">Percentage</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700 dark:text-gray-300">
+            <tr>
+              <td class="border px-4 py-2">Bal Bharti Public School, Alwar</td>
+              <td class="border px-4 py-2">2018–2020</td>
+              <td class="border px-4 py-2">9<sup>th</sup>–10<sup>th</sup></td>
+              <td class="border px-4 py-2">89%</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Bal Vishwa Bharti Public School, Jaipur</td>
+              <td class="border px-4 py-2">2020–2022</td>
+              <td class="border px-4 py-2">11<sup>th</sup>–12<sup>th</sup></td>
+              <td class="border px-4 py-2">75%</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">KCRI College, Alwar</td>
+              <td class="border px-4 py-2">2022–Present</td>
+              <td class="border px-4 py-2">BCA</td>
+              <td class="border px-4 py-2">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+        <hr><br><hr><br><hr>
+  <footer id="footer" class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold">Arman Khan</h3>
+        <p>Contact: <a href="tel:+919887084000" class="underline">+91 98870 84000</a></p>
+        <div class="mt-4">
+          <a href="contact.htm" class="inline-block text-blue-400 hover:underline">
+            Contact Page <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-3">Connect with Me</h4>
+        <ul class="space-y-2">
+          <li><a href="https://www.instagram.com/invites/contact/?igsh=j5n9pgz7lhn&utm_content=k5xwfr1" target="_blank" rel="noopener" class="hover:underline"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100056227550232" target="_blank" rel="noopener" class="hover:underline"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://youtube.com/@armankhan-pr5xw" target="_blank" rel="noopener" class="hover:underline"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://www.linkedin.com/in/arman-khan-623443289" target="_blank" rel="noopener" class="hover:underline"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="mailto:armankhan52210@gmail.com" class="hover:underline"><i class="fa-solid fa-envelope"></i> Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- AOS Plugin -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init({ once: true });</script>
+
+  <!--   JavaScript for name animation -->
+<script>
+  const name = "Arman Khan";
+  const typingElement = document.getElementById("typed-name");
+
+  let index = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    if (!isDeleting) {
+      typingElement.textContent = name.substring(0, index + 1);
+      index++;
+      if (index === name.length + 1) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1000); // pause after typing
+        return;
+      }
+    } else {
+      typingElement.textContent = name.substring(0, index - 1);
+      index--;
+      if (index === 0) {
+        isDeleting = false;
+      }
+    }
+    setTimeout(typeEffect, isDeleting ? 100 : 150); // typing & deleting speed
+  }
+
+  typeEffect(); // run immediately
+</script>
+
+
+</body>
+</html>
+
+{% endblock  %}
