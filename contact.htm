@@ -16,28 +16,36 @@
     />
     <link rel="icon" type="image/x-icon" href="website_logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Define the custom font family */
+        .font-jost {
+            font-family: 'Jost', sans-serif;
+        }
+    </style>
   </head>
 
-  <body class="bg-gray-50 font-sans text-gray-800 scroll-smooth">
-    <!-- Header -->
+  <body class="bg-gray-50 font-jost text-gray-800 scroll-smooth">
     <header class="bg-white shadow sticky top-0 z-50">
       <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        <a href="index.htm" class="text-2xl font-bold text-indigo-600 underline">Arman Khan</a>
+        <a href="index.htm" class="text-2xl font-bold text-indigo-600">Arman Khan</a>
         <nav>
           <ul class="flex space-x-6 text-sm font-medium">
             <li><a href="index.htm" class="hover:text-indigo-600">Home</a></li>
-           <!-- <li><a href="contact.htm" class="text-indigo-600">Contact</a></li> -->
-          </ul>
+            </ul>
         </nav>
       </div>
     </header>
 
-    <!-- Contact Section -->
     <section class="py-16 px-4 sm:px-8" data-aos="fade-up">
       <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
-        <!-- Contact Links -->
         <div class="space-y-6">
           <h2 class="text-3xl font-semibold mb-6">Let's Connect</h2>
+          <p class="text-lg text-[var(--text-color-secondary)] mb-6">
+            Feel free to reach out through any of the platforms below or use the contact form.
+          </p>
           <ul class="space-y-4 text-lg">
             <li>
               <a href="https://www.linkedin.com/in/arman-khan-623443289" target="_blank" class="flex items-center gap-2 hover:text-blue-800">
@@ -72,7 +80,6 @@
           </ul>
         </div>
 
-        <!-- Contact Form -->
         <div class="bg-white shadow-lg rounded-lg p-8" data-aos="fade-left">
           <h2 class="text-2xl font-semibold mb-6">Send a Message</h2>
           <form action="https://formspree.io/f/xvgowgdp" method="POST" class="space-y-4">
@@ -109,15 +116,25 @@
                 class="w-full mt-1 p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
+            <div>
+              <label class="block text-sm font-medium">Message (Optional)</label>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Your message..."
+                class="w-full mt-1 p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              ></textarea>
+            </div>
             <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition">
               Submit
             </button>
           </form>
         </div>
       </div>
+        <p class="text-lg text-[var(--text-color-secondary)] mb-6">© 2025 Arman Khan. All rights reserved.</p>
+      </div>
     </section>
 
-    <!-- AOS Script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();</script>
   </body>
